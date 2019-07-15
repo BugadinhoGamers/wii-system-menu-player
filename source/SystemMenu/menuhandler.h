@@ -199,8 +199,8 @@ private:
     void AnimateZoom(const Vec2f &ScreenProps, bool AnimZoomIn);
 
     static const int MaxAnimSteps = 30; // Animation duration in frames
-    static const float fBannerWidth = 608.0f;
-    static const float fBannerHeight = 448.0f;
+    static constexpr float fBannerWidth = 608.0f;
+    static constexpr float fBannerHeight = 448.0f;
 
     Mtx44 BannerProjection;
     u8 BannerAlpha;

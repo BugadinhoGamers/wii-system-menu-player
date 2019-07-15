@@ -592,7 +592,7 @@ ChannelGrid *SystemMenuResources::CreateChannelGrid()
 		gprintf( "error loading channel grid\n" );
 		delete channelGrid;
 		FREE( chanSelAsh );
-		return false;
+		return NULL;
 	}
 	return channelGrid;
 }
@@ -681,7 +681,7 @@ HealthScreen *SystemMenuResources::CreateHealthScreen()
 	{
 		gprintf( "Error while loading health.ash\n" );
 		FREE( backMenuData );
-		return false;
+		return NULL;
 	}
 
 	// create health screen

@@ -427,7 +427,7 @@ extern "C" bool RemoveDirectory(const char *path)
 	if (dir == NULL)
 		return false;
 
-	char * filepath = new (std::nothrow) char[MAXPATHLEN];
+	char * filepath = new (std::nothrow) char[/*MAXPATHLEN*/1024];
 	if(!filepath)
 	{
 	    closedir(dir);
@@ -444,7 +444,7 @@ extern "C" bool RemoveDirectory(const char *path)
 		if(!strcmp(dirent->d_name, ".") || !strcmp(dirent->d_name, ".."))
 			continue;
 
-		snprintf(filepath, MAXPATHLEN, "%s%s%s", folderpath.c_str(), isRoot ? "" : "/", dirent->d_name);
+		snprintf(filepath, /*MAXPATHLEN*/1024, "%s%s%s", folderpath.c_str(), isRoot ? "" : "/", dirent->d_name);
 		if(stat(filepath, &st) != 0)
 			continue;
 

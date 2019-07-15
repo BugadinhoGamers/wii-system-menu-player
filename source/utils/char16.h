@@ -1,6 +1,8 @@
 #ifndef CHAR16_H
 #define CHAR16_H
 
+#include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <gctypes.h>
 
@@ -31,5 +33,6 @@ char16 *strdup16( const char *str );
 // uses sprintf internally to create a formatted char* string and then copies it to the char16* string specified
 int sprintf16( char16 *str, const char* fmt, ... )  __attribute__(( format( printf, 2, 3 ) ));
 int snprintf16( char16 *str, int maxLen, const char* fmt, ... )  __attribute__(( format( printf, 3, 4 ) ));
+int vasprintf(char** strp, const char* fmt, va_list ap);
 
 #endif // CHAR16_H

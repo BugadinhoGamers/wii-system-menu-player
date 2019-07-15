@@ -31,6 +31,8 @@ distribution.
 #include "sc.h"
 #include "settings.h"
 #include "video.h"
+#include "char16.h"
+
 
 MenuHandler *MenuHandler::instance = NULL;
 

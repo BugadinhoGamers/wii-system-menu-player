@@ -97,7 +97,7 @@ u8* DataBin::GetSaveBanner( FILE* file, u32 &len, u64 &tid, u32 &installedBytes 
 	{
 		gprintf( "ES_Decrypt(): %i\n", ret );
 		free( buf );
-		return false;
+		return NULL;
 	}
 
 	Header *header = (Header*)buf;

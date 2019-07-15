@@ -63,7 +63,8 @@ static void AddNandBannerPaths( u32 whichOnes )
 				continue;
 			}
 
-			u16 i;
+			//FIXME: Probably broke behaviour here!
+			//u16 i;
 			bool ok = false;
 			for( i = 0; i < titleTmd->num_contents; i++ )
 			{

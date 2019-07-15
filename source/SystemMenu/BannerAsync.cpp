@@ -131,11 +131,11 @@ void * BannerAsync::BannerAsyncThread(void *arg)
 			{
 				LoadNandBanner( InUse );
 			}
-			else if( strcasestr( InUse->filepath.c_str(), "/apps/" ) )
+			else if( strcasecmp( InUse->filepath.c_str(), "/apps/" ) )
 			{
 				LoadHomebrewBanner( InUse );
 			}
-			else if( strcasestr( InUse->filepath.c_str(), "content.bin" ) )
+			else if( strcasecmp( InUse->filepath.c_str(), "content.bin" ) )
 			{
 				LoadContentBinBanner( InUse );
 			}

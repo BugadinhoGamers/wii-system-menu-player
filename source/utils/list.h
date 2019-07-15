@@ -14,7 +14,7 @@ public:
 	// add stuff to the end of the list
 	List &Append( const T& newEntry )
 	{
-		push_back( newEntry );
+		this->push_back( newEntry );
 		return *this;
 	}
 
@@ -23,7 +23,7 @@ public:
 		u32 len = otherList.size();
 		for( u32 i = 0; i < len; i++ )
 		{
-			push_back( otherList[ i ] );
+			this->push_back( otherList[ i ] );
 		}
 		return *this;
 	}
@@ -57,7 +57,7 @@ public:
 			return T();
 		}
 		const T ret = std::vector< T >::operator[]( index );
-		erase( std::vector< T >::begin() + index );
+		this->erase( std::vector< T >::begin() + index );
 		return ret;
 	}
 
@@ -69,7 +69,7 @@ public:
 			return T();
 		}
 		const T ret = std::vector< T >::operator[]( size - 1 );
-		erase( std::vector< T >::begin() + size - 1 );
+		this->erase( std::vector< T >::begin() + size - 1 );
 		return ret;
 	}
 
@@ -81,7 +81,7 @@ public:
 			return T();
 		}
 		const T ret = std::vector< T >::operator[]( 0 );
-		erase( std::vector< T >::begin() );
+		this->erase( std::vector< T >::begin() );
 		return ret;
 	}
 
@@ -105,7 +105,7 @@ public:
 		{
 			if( std::vector< T >::operator[]( i ) == item )
 			{
-				erase( std::vector< T >::begin() + i );
+				this->erase( std::vector< T >::begin() + i );
 				i--;
 				size--;
 			}

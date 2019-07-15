@@ -1,0 +1,4 @@
+# Don't put build files onto the repository, otherwise it will increase in size
+build/
+boot.dol
+boot.elf
